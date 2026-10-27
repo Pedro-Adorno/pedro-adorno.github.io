@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080d1a" />
+    <meta name="description" content="Protótipo 2D de batalha em navegador." />
+    <title>Marvel Battle — 2D Prototype</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar"><a class="brand" href="#" aria-label="Marvel Battle início"><span class="brand-mark">M</span><span>MARVEL<span class="muted">//</span>BATTLE</span></a><div class="top-status"><span class="live-dot"></span> PROTÓTIPO LOCAL <span class="top-divider">•</span> BUILD 0.1</div></header>
+      <main class="shell">
+        <section class="game-frame" aria-label="Jogo de batalha">
+          <div id="game-root"></div>
+          <div id="menu-overlay" class="overlay menu-overlay">
+            <div class="eyebrow"><span class="eyebrow-line"></span> HEROES COLLIDE <span class="eyebrow-line"></span></div>
+            <h1>MARVEL<br><span>BATTLE</span></h1>
+            <p class="subtitle">2D BATTLE PROTOTYPE</p>
+            <div class="matchup"><div class="match-hero spider-mini"><span>SPIDER</span><strong>MAN</strong></div><span class="versus">VS</span><div class="match-hero cap-mini"><span>CAPTAIN</span><strong>AMERICA</strong></div></div>
+            <button id="play-button" class="primary-button">JOGAR <span>↗</span></button>
+            <p class="menu-hint">UM PROTÓTIPO. UMA ARENA. SEM REGRAS FÁCEIS.</p>
+          </div>
+          <div id="result-overlay" class="overlay result-overlay hidden">
+            <div class="eyebrow"><span class="eyebrow-line"></span> FIM DE COMBATE <span class="eyebrow-line"></span></div>
+            <p id="result-kicker" class="result-kicker">VITÓRIA</p><h2 id="result-name">SPIDER-MAN</h2><p class="result-subtitle">A arena tem um novo destaque.</p>
+            <div class="stats-grid"><div><span>DANO CAUSADO</span><strong id="stat-dealt">0</strong></div><div><span>DANO RECEBIDO</span><strong id="stat-taken">0</strong></div><div><span>ATAQUES</span><strong id="stat-attacks">0</strong></div><div><span>TEMPO</span><strong id="stat-time">00:00</strong></div></div>
+            <button id="again-button" class="primary-button">JOGAR NOVAMENTE <span>↻</span></button>
+          </div>
+        </section>
+        <section class="battle-hud" id="battle-hud" aria-label="Status da batalha">
+          <div class="fighter-card spider-card"><div class="fighter-heading"><div><span class="fighter-label">JOGADOR 01</span><h2>SPIDER-MAN</h2></div><span class="fighter-symbol spider-symbol">✳</span></div><div class="health-track"><div id="spider-health" class="health-fill spider-health"></div></div><div class="health-meta"><span id="spider-hp">1000 / 1000 HP</span><span class="status-tag">AGILIDADE</span></div></div>
+          <div class="round-indicator"><span>ROUND</span><strong>01</strong><i></i></div>
+          <div class="fighter-card cap-card"><div class="fighter-heading"><div><span class="fighter-label">CPU / IA</span><h2>CAPTAIN AMERICA</h2></div><span class="fighter-symbol cap-symbol">★</span></div><div class="health-track"><div id="cap-health" class="health-fill cap-health"></div></div><div class="health-meta"><span id="cap-hp">1200 / 1200 HP</span><span class="status-tag">DEFESA</span></div></div>
+        </section>
+        <section class="controls-panel" id="controls-panel"><div class="controls-title"><div><span class="section-kicker">SEU KIT</span><h3>CONTROLES DE COMBATE</h3></div><span class="keyboard-hint">TECLADO <span>⌨</span></span></div><div class="ability-list"><div class="ability-item" data-ability="attack"><div class="ability-icon punch-icon">✦</div><div class="ability-info"><strong>ATAQUE BÁSICO</strong><span>Socos e chutes</span></div><kbd>J</kbd><div class="cooldown"><span id="cd-attack">PRONTO</span><div class="cooldown-track"><i id="bar-attack"></i></div></div></div><div class="ability-item" data-ability="web"><div class="ability-icon web-icon">⌘</div><div class="ability-info"><strong>TEIA</strong><span>Prende e desacelera</span></div><kbd>K</kbd><div class="cooldown"><span id="cd-web">PRONTO</span><div class="cooldown-track"><i id="bar-web"></i></div></div></div><div class="ability-item" data-ability="pull"><div class="ability-icon pull-icon">↗</div><div class="ability-info"><strong>TEIA PUXADORA</strong><span>Avanço rápido</span></div><kbd>L</kbd><div class="cooldown"><span id="cd-pull">PRONTO</span><div class="cooldown-track"><i id="bar-pull"></i></div></div></div><div class="ability-item" data-ability="sense"><div class="ability-icon sense-icon">◎</div><div class="ability-info"><strong>ARANHA SENSE</strong><span>Velocidade + dano</span></div><kbd>U</kbd><div class="cooldown"><span id="cd-sense">PRONTO</span><div class="cooldown-track"><i id="bar-sense"></i></div></div></div></div><div class="movement-hint"><span><kbd>A</kbd><kbd>D</kbd> MOVER</span><span><kbd>W</kbd> PULAR</span><span class="hint-right">DICA: MISTURE ATAQUES E HABILIDADES</span></div></section>
+        <footer class="footer"><span>MARVEL BATTLE <span class="muted">/</span> MVP 0.1</span><span>FEITO PARA TESTAR NO NAVEGADOR <span class="footer-dot">●</span></span></footer>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

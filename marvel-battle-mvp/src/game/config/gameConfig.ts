@@ -1,0 +1,13 @@
+export const GAME_WIDTH = 960;
+export const GAME_HEIGHT = 450;
+export const FLOOR_Y = 374;
+export const ARENA_PADDING = 44;
+export const PLAYER_START_X = 245;
+export const CPU_START_X = 715;
+export const GRAVITY = 1150;
+export const JUMP_VELOCITY = -480;
+export const BASE_DAMAGE_SCALE = 1;
+export const BASIC_HIT_WINDOW = 0.18;
+export const ATTACK_ANIMATION_TIME = 0.22;
+export const AI_THINK_INTERVAL = 0.22;
+export const MAX_PARTICLES = 70;
